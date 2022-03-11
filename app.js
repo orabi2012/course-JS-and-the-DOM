@@ -1,5 +1,4 @@
 const h = document.querySelector("h6.text-center");
-const allElement = document.querySelector('#contain-all');
 
 let i = 0;
 h.addEventListener("click", function () {
@@ -21,17 +20,15 @@ h.addEventListener("click", function () {
   // window.close();
 });
 
-document.body.addEventListener('keypress' , function(){
+const allElement = document.querySelector("#contain-all");
 
-if (allElement.firstElementChild != null){
-  console.log(`${allElement.firstElementChild.tagName } removed`)
-  allElement.firstElementChild.remove();
+document.body.addEventListener("keypress", removeElement);
 
-}else{
-
-  console.log(`No Elements to be removed`)
+function removeElement() {
+  if (allElement.firstElementChild != null) {
+    console.log(`${allElement.firstElementChild.tagName} removed`);
+    allElement.firstElementChild.remove();
+  } else {
+    console.log(`No Elements to be removed`);
+  }
 }
-  
-
-
-})
