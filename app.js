@@ -30,5 +30,6 @@ function removeElement() {
     allElement.firstElementChild.remove();
   } else {
     console.log(`No Elements to be removed`);
+    document.body.removeEventListener("keypress", removeElement);
   }
 }
