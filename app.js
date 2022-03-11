@@ -33,3 +33,37 @@ function removeElement() {
     document.body.removeEventListener("keypress", removeElement);
   }
 }
+
+const links = document.querySelectorAll('a');
+const thirdLink = links[20];
+thirdLink.style.fontSize = "30px"
+thirdLink.style.backgroundColor = "red"
+thirdLink.style.Color = "red"
+
+thirdLink.addEventListener('click', function (event) {
+ // console.log(thirdLink.TEXT_NODE);
+
+    event.preventDefault();
+    console.log("Look, ma! We didn't navigate to a new page!");
+});
+
+
+const myCustomDiv = document.createElement('div');
+
+function respondToTheClick(event) {
+    console.log(`A paragraph was clicked. ${event.target.textContent}`);
+}
+
+for (let i = 1; i <= 100; i++) {
+    const newElement = document.createElement('p');
+    newElement.style.border= "thin solid #000000"; 
+    newElement.style.backgroundColor = "red"
+    newElement.textContent = 'This is paragraph number ' + i + '\n';
+
+    myCustomDiv.appendChild(newElement);
+}
+
+myCustomDiv.addEventListener('click', respondToTheClick);
+
+myCustomDiv.style.border= "thick solid #0000FF"; 
+document.body.appendChild(myCustomDiv);
