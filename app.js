@@ -22,6 +22,7 @@ h.addEventListener("click", function () {
 
     h.innerHTML = `ارحم امي العيانة` ;
     h.style.backgroundColor = "yellow";
+    
   }
   
   
