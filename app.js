@@ -2,10 +2,6 @@ const h = document.querySelector("h6.text-center");
 
 let i = 0;
 h.addEventListener("click", function () {
-
-
- 
-
   h.classList.add("text-center");
   h.style.color = "blue";
 
