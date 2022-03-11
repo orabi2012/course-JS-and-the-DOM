@@ -61,7 +61,8 @@ function respondToTheClick(event) {
 for (let i = 1; i <= 10; i++) {
   const newElement = document.createElement("p");
   newElement.style.border = "thin solid #000000";
-  newElement.style.backgroundColor = "red";
+
+  newElement.style.backgroundColor = "green";
   newElement.textContent = "This is paragraph number " + i + "\n";
 
   myCustomDiv.appendChild(newElement);
