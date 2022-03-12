@@ -72,8 +72,8 @@ for (let i = 1; i <= 1000; i++) {
   newElement.style.border = "thin solid #000000";
 
   newElement.style.backgroundColor = RandomColor();
-  newElement.style.color = RandomColor() ;
-  newElement.textContent = "This is paragraph number " + i + "\n";
+  //newElement.style.color = RandomColor() ;
+  newElement.textContent = `This is paragraph number  ${i}  Color = ${RandomColor()} ` + "\n";
  // newElement.addEventListener("click", respondToTheClick);
 
  myCustomDiv.appendChild(newElement);
@@ -96,7 +96,7 @@ let count = 1
 function generateParagraphs() {
     const fragment = document.createDocumentFragment();
 
-    for (let i = 1; i <= 1000; i++) {
+    for (let i = 1; i <= 500; i++) {
         const newElement = document.createElement('p');
         newElement.textContent = 'This is paragraph number ' + count;
         console.log(`count = ${count}`);
@@ -108,7 +108,7 @@ function generateParagraphs() {
     document.body.appendChild(fragment);
 
     
-    if (count > 5000) {
+    if (count > 1000) {
         setTimeout(generateParagraphs, 0);
     }
 }
