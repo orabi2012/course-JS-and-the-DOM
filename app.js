@@ -67,12 +67,12 @@ const fragment = document.createDocumentFragment();
 
 const startingTime = performance.now();
 
-for (let i = 1; i <= 1; i++) {
+for (let i = 1; i <= 1000; i++) {
   const newElement = document.createElement("p");
   newElement.style.border = "thin solid #000000";
 
-  newElement.style.backgroundColor = "green";
-  newElement.style.color = "white"
+  newElement.style.backgroundColor = RandomColor();
+  newElement.style.color = RandomColor() ;
   newElement.textContent = "This is paragraph number " + i + "\n";
  // newElement.addEventListener("click", respondToTheClick);
 
@@ -113,6 +113,8 @@ function generateParagraphs() {
     }
 }
 
-setTimeout(generateParagraphs, 1000);
+// setTimeout(generateParagraphs, 1000);
 
-//generateParagraphs();
+// generateParagraphs();
+
+function RandomColor (){return `#${Math.floor(Math.random()*16777215).toString(16)}`;}
