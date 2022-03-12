@@ -96,7 +96,7 @@ let count = 1
 function generateParagraphs() {
     const fragment = document.createDocumentFragment();
 
-    for (let i = 1; i <= 500; i++) {
+    for (let i = 1; i <= 1000; i++) {
         const newElement = document.createElement('p');
         newElement.textContent = 'This is paragraph number ' + count;
         console.log(`count = ${count}`);
