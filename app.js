@@ -108,7 +108,7 @@ function generateParagraphs() {
     document.body.appendChild(fragment);
 
     
-    if (count > 1000) {
+    if (count > 5000) {
         setTimeout(generateParagraphs, 0);
     }
 }
